@@ -6,13 +6,13 @@ jobs:
     first_jon:
         runs-on: ubuntu-latest
         steps:
-        -name:Wellcome mesaage
-         run:echo "My first Github Action Job"
+        - name: Wellcomemesaage
+          run: echo "My first Github Action Job"
 
-        -name:List files 
-         run:ls
+        - name: List files 
+          run: ls
 
-        -name:Read file
-         run: cat README.md
+        - name: Readfile
+          run: cat README.md
 
 
