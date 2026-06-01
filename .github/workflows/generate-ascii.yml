@@ -1,0 +1,17 @@
+name: Generate SCCII Artwork
+on: 
+    push 
+      jobs: 
+        ascci_job:
+            runs-on: ubuntu-latest
+            steps:
+                - name: checkou repo
+                  uses: actions/checkout@v6
+
+                - name: Install Cowsay program 
+                  run: sudo apt-get install 
+                - name: execute cowsay CMD
+                  run: cowsay -f dragon 'Run for cover, I am a DRAGON....RAWR' >> dragon.txt
+                - name: Test file exists
+                  run: grep -i "dragon" dragon.txt
+
