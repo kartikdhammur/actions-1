@@ -1,6 +1,6 @@
 name: Generate SCCII Artwork
-on: 
-    push 
+on: push
+ 
       jobs: 
         ascci_job:
             runs-on: ubuntu-latest

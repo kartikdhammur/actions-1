@@ -1,27 +1,16 @@
-name: My First Worklow
-on: push 
+name: Generate Asccik Artwork 
+on: 
+  push 
 
-jobs: 
-    first_job:
-        runs-on: ubuntu-latest
+Jobs: 
+  Ascci_job:
+    runs-on: ubuntu-latest
+steps:
+  - name: check out Repo 
+  - uses: actions/checkout@v6
+  - name: List Repo Files 
+     run: Ls -ltra
 
-        steps:
-            - name: checkout Repo
-              uses: actions/checkout@v4
-
-            - name: List and Read file
-              run: 
-                echo "My first Github Actions job"
-                ls -ltra
-                cat README.md
-            - name: Generate ASCIT Artbook
-              run:  cowsay -f dragon "Run for cover, I am a DRAGON....RAWR" >> dragon.txt    
-
-            # - name: list files
-              # run: ls
-
-            #- name: Read file
-             #  run: cat README.md 
-
-
-
+  - name: Executin shell script 
+     run: ./ascci-script.sh
+  
